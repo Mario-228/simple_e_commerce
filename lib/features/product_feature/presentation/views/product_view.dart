@@ -6,6 +6,11 @@ class ProductView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: ProductViewBody());
+    return const Scaffold(
+      body: Padding(
+        padding: EdgeInsets.symmetric(horizontal: 10.0),
+        child: ProductViewBody(),
+      ),
+    );
   }
 }
