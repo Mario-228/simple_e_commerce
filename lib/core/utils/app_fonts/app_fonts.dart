@@ -190,7 +190,7 @@ abstract class AppFonts {
     fontWeight: FontWeight.w700,
   );
   static const TextStyle textStyleBold24 = TextStyle(
-    color: AppColors.orange,
+    color: AppColors.blueGrey,
     fontSize: 24,
     fontFamily: 'Lufga',
     fontWeight: FontWeight.w700,
