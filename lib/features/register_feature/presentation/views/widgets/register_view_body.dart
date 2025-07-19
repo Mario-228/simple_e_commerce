@@ -6,8 +6,8 @@ import 'package:simple_e_commerce/core/utils/app_router/app_router.dart';
 import 'package:simple_e_commerce/core/widgets/custom_material_button.dart';
 import 'package:simple_e_commerce/core/widgets/custom_text_form_field.dart';
 
-class LoginViewBody extends StatelessWidget {
-  const LoginViewBody({super.key});
+class RegisterViewBody extends StatelessWidget {
+  const RegisterViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,10 @@ class LoginViewBody extends StatelessWidget {
         children: [
           Text('Welcome', style: AppFonts.textStyleBold28),
           SizedBox(height: 10),
-          Text('Please Login to continue', style: AppFonts.textStyleRegular15),
+          Text(
+            'Please Register to continue',
+            style: AppFonts.textStyleRegular15,
+          ),
           SizedBox(height: 20),
           CustomTextFormField(
             type: TextInputType.emailAddress,
@@ -43,23 +46,16 @@ class LoginViewBody extends StatelessWidget {
           ),
           SizedBox(height: 20),
           CustomMaterialButton(
-            text: "Login",
+            text: "Register",
             color: AppColors.orange,
             onPressed: () {},
           ),
           SizedBox(height: 20),
           CustomMaterialButton(
-            text: "Register",
+            text: "Return to Login",
             color: AppColors.white,
             textColor: AppColors.black,
-            onPressed: () => GoRouter.of(context).push(AppRouter.register),
-          ),
-          SizedBox(height: 20),
-          CustomMaterialButton(
-            text: "Continue as Guest",
-            color: AppColors.white,
-            textColor: AppColors.black,
-            onPressed: () => GoRouter.of(context).push(AppRouter.home),
+            onPressed: () => GoRouter.of(context).push(AppRouter.login),
           ),
         ],
       ),
