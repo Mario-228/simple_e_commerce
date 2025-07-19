@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:simple_e_commerce/features/home_feature/presentation/views/home_view.dart';
+import 'package:simple_e_commerce/features/login_feature/presentation/views/login_view.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(),
-      home: const HomeView(),
+      home: const LoginView(),
     );
   }
 }
