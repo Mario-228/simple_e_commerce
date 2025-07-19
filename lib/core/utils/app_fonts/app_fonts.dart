@@ -184,7 +184,7 @@ abstract class AppFonts {
   );
 
   static const TextStyle textStyleBold28 = TextStyle(
-    color: AppColors.darkGreen,
+    color: AppColors.blackShade800,
     fontSize: 28,
     fontFamily: 'Lufga',
     fontWeight: FontWeight.w700,
