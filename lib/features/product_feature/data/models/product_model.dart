@@ -12,7 +12,7 @@ class ProductModel {
   final double rating;
   final int stock;
   final List<String> tags;
-  final String brand;
+  final String? brand;
   final String sku;
   final int weight;
   final Dimensions dimensions;
