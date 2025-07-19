@@ -23,7 +23,7 @@ abstract class AppColors {
 
   //blue
   static const Color babyBlue = Color(0xFFCCD8D6);
-  static const Color blueGrey = Color(0xFF78A0CF);
+  static const Color blueGrey = Colors.deepPurple;
 
   //grey
   static const Color grey = Color(0xFFAAAAAA);
