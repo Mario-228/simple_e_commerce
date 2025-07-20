@@ -1,38 +1,42 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:simple_e_commerce/core/utils/firebase_service/firebase_service.dart';
-import 'package:simple_e_commerce/features/register_feature/presentation/views_models/register_cubit/register_states.dart';
+import 'package:simple_e_commerce/features/login_feature/presentation/views_models/login_cubit/login_states.dart';
 
-class RegisterCubit extends Cubit<RegisterStates> {
-  RegisterCubit() : super(RegisterInitial());
+class LoginCubit extends Cubit<LoginStates> {
+  LoginCubit() : super(LoginInitialState());
 
-  static RegisterCubit get(BuildContext context) => BlocProvider.of(context);
+  static LoginCubit get(BuildContext context) => BlocProvider.of(context);
   TextEditingController emailController = TextEditingController();
   TextEditingController passwordController = TextEditingController();
   GlobalKey<FormState> formKey = GlobalKey<FormState>();
-  Future<void> register({required BuildContext context}) async {
-    emit(RegisterLoadingState());
+  Future<void> login(BuildContext context) async {
+    emit(LoginLoadingState());
+
     try {
-      final user = await FirebaseService().register(
+      final user = await FirebaseService().login(
         context: context,
         email: emailController.text,
         password: passwordController.text,
       );
+
       if (user != null) {
-        emit(RegisterSuccessState(user: user));
+        emit(LoginSuccessState(user: user));
       } else {
         emit(
-          RegisterErrorState(error: 'Registration failed. Please try again.'),
+          LoginErrorState(
+            error: 'Login failed. Please check your credentials.',
+          ),
         );
       }
     } catch (e) {
-      emit(RegisterErrorState(error: 'An error occurred: ${e.toString()}'));
+      emit(LoginErrorState(error: 'An error occurred: ${e.toString()}'));
     }
   }
 
   bool isVisible = true;
   IconData eye = Icons.visibility_off;
-  void changeVisibility() {
+  void changeLoginVisibility() {
     isVisible = !isVisible;
     if (isVisible) {
       eye = Icons.visibility_off;

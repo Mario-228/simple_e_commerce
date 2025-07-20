@@ -15,3 +15,5 @@ class RegisterErrorState extends RegisterStates {
   final String error;
   RegisterErrorState({required this.error});
 }
+
+class ChangePasswordVisibilityState extends RegisterStates {}
