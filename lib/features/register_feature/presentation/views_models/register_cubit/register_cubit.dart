@@ -29,4 +29,16 @@ class RegisterCubit extends Cubit<RegisterStates> {
       emit(RegisterErrorState(error: 'An error occurred: ${e.toString()}'));
     }
   }
+
+  bool isVisible = true;
+  IconData eye = Icons.visibility_off;
+  void changeVisibility() {
+    isVisible = !isVisible;
+    if (isVisible) {
+      eye = Icons.visibility_off;
+    } else {
+      eye = Icons.visibility;
+    }
+    emit(ChangePasswordVisibilityState());
+  }
 }
