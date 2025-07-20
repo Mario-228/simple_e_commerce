@@ -15,8 +15,14 @@ class CustomCartItemProduct extends StatelessWidget {
           width: 60,
           fit: BoxFit.cover,
         ),
-        title: Text(item.product.title),
-        subtitle: Text('\$${item.product.price * item.quantity}'),
+        title: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text(item.product.title),
+        ),
+        subtitle: FittedBox(
+          fit: BoxFit.scaleDown,
+          child: Text('\$${item.product.price * item.quantity}'),
+        ),
         trailing: Row(
           mainAxisSize: MainAxisSize.min,
           children: [
