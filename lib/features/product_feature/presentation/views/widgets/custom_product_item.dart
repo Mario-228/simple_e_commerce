@@ -3,7 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:simple_e_commerce/core/utils/app_router/app_router.dart';
 import 'package:simple_e_commerce/core/utils/functions/show_snack_bar.dart';
-import 'package:simple_e_commerce/core/utils/get_it_service/variables_locator_service.dart';
+import 'package:simple_e_commerce/core/utils/variables_locator_service/variables_locator_service.dart';
 import 'package:simple_e_commerce/core/utils/product_model_with_quantity/product_model_with_quantity.dart';
 import 'package:simple_e_commerce/features/product_feature/data/models/product_model.dart';
 

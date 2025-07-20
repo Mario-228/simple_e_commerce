@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import '../../../../../core/utils/get_it_service/variables_locator_service.dart';
+import '../../../../../core/utils/variables_locator_service/variables_locator_service.dart';
 import '../../../../../core/utils/product_model_with_quantity/product_model_with_quantity.dart';
 
 class CustomCartItemProduct extends StatelessWidget {

@@ -1,9 +1,7 @@
-import 'dart:developer';
-
 import 'package:filter_list/filter_list.dart';
 import 'package:flutter/material.dart';
 import 'package:simple_e_commerce/core/utils/app_colors/app_colors.dart';
-import '../../../../../core/utils/get_it_service/variables_locator_service.dart';
+import '../../../../../core/utils/variables_locator_service/variables_locator_service.dart';
 import '../../../../../core/widgets/custom_material_button.dart';
 
 class CustomEndDrawer extends StatefulWidget {
@@ -20,8 +18,6 @@ class _CustomEndDrawerState extends State<CustomEndDrawer> {
   @override
   void initState() {
     super.initState();
-    log(VariablesLocatorService.getProductCubit.minPrice.toString());
-    log(VariablesLocatorService.getProductCubit.maxPrice.toString());
     min = VariablesLocatorService.getProductCubit.minPrice;
     max = VariablesLocatorService.getProductCubit.maxPrice;
     rangeValues = RangeValues(min, max);

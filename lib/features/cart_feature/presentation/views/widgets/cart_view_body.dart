@@ -4,7 +4,7 @@ import 'package:simple_e_commerce/core/utils/app_colors/app_colors.dart';
 import 'package:simple_e_commerce/core/utils/app_fonts/app_fonts.dart';
 import 'package:simple_e_commerce/core/utils/cart_cubit/cart_cubit.dart';
 import 'package:simple_e_commerce/core/utils/cart_cubit/cart_states.dart';
-import 'package:simple_e_commerce/core/utils/get_it_service/variables_locator_service.dart';
+import 'package:simple_e_commerce/core/utils/variables_locator_service/variables_locator_service.dart';
 import 'package:simple_e_commerce/core/widgets/custom_material_button.dart';
 import 'package:simple_e_commerce/features/cart_feature/presentation/views/widgets/custom_cart_item_product.dart';
 
