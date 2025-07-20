@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:simple_e_commerce/core/utils/app_colors/app_colors.dart';
 import 'package:simple_e_commerce/core/utils/app_fonts/app_fonts.dart';
-import 'package:simple_e_commerce/core/utils/functions/show_snack_bar.dart';
-import 'package:simple_e_commerce/core/widgets/custom_material_button.dart';
+import 'package:simple_e_commerce/features/product_details_feature/presentation/views/widgets/add_to_cart_button.dart';
 import 'package:simple_e_commerce/features/product_feature/data/models/product_model.dart';
 
 class ProductDetailsViewBody extends StatefulWidget {
@@ -99,20 +97,7 @@ class _ProductDetailsViewBodyState extends State<ProductDetailsViewBody> {
             ],
           ),
           const SizedBox(height: 24),
-          CustomMaterialButton(
-            text: "Add to Cart",
-            onPressed: () {
-              if (quantity == 0) {
-                showSnackBar(context, "Please select quantity");
-              } else {
-                showSnackBar(
-                  context,
-                  "Added ${widget.product.title} (x$quantity) to cart",
-                );
-              }
-            },
-            color: AppColors.orange,
-          ),
+          AddToCartButton(quantity: quantity, widget: widget),
         ],
       ),
     );
