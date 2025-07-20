@@ -72,7 +72,8 @@ class LoginViewBody extends StatelessWidget {
               text: "Continue as Guest",
               color: AppColors.white,
               textColor: AppColors.black,
-              onPressed: () => GoRouter.of(context).push(AppRouter.home),
+              onPressed:
+                  () => GoRouter.of(context).pushReplacement(AppRouter.home),
             ),
           ],
         ),

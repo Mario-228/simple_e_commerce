@@ -1,6 +1,4 @@
 import 'dart:collection';
-import 'dart:developer';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:simple_e_commerce/features/product_feature/data/models/product_model.dart';
@@ -46,8 +44,6 @@ class GetProductCubit extends Cubit<GetProductStates> {
       minPrice = element.price < minPrice ? element.price : minPrice;
       maxPrice = element.price > maxPrice ? element.price : maxPrice;
     }
-    log(categories.length.toString());
-    log(categories.toString());
   }
 
   void applyFilters({

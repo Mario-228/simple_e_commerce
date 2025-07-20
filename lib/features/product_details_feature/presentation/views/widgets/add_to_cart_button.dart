@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:simple_e_commerce/core/utils/app_colors/app_colors.dart';
-import 'package:simple_e_commerce/core/utils/get_it_service/variables_locator_service.dart';
+import 'package:simple_e_commerce/core/utils/variables_locator_service/variables_locator_service.dart';
 import 'package:simple_e_commerce/core/widgets/custom_material_button.dart';
 import 'package:simple_e_commerce/features/product_details_feature/presentation/views/widgets/product_details_view_body.dart';
 import '../../../../../core/utils/functions/show_snack_bar.dart';
