@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
+import 'package:simple_e_commerce/core/utils/app_router/app_router.dart';
 import 'package:simple_e_commerce/core/utils/functions/show_snack_bar.dart';
 import 'package:simple_e_commerce/features/product_feature/data/models/product_model.dart';
 
@@ -29,7 +31,10 @@ class CustomProductItem extends StatelessWidget {
             showSnackBar(context, "Product added to cart");
           },
         ),
-        onTap: () {},
+        onTap:
+            () => GoRouter.of(
+              context,
+            ).push(AppRouter.productDetails, extra: productModel),
       ),
     );
   }

@@ -135,7 +135,7 @@ abstract class AppFonts {
     fontWeight: FontWeight.w600,
   );
   static const TextStyle textStyleBold16 = TextStyle(
-    color: AppColors.beige,
+    color: AppColors.black,
     fontSize: 16,
     fontFamily: 'Lufga',
     fontWeight: FontWeight.w700,
@@ -160,6 +160,12 @@ abstract class AppFonts {
   );
   static const TextStyle textStyleBold20 = TextStyle(
     color: AppColors.darkGrey,
+    fontSize: 20,
+    fontFamily: 'Lufga',
+    fontWeight: FontWeight.w700,
+  );
+  static const TextStyle textStyleBoldGreen20 = TextStyle(
+    color: AppColors.limeGreen,
     fontSize: 20,
     fontFamily: 'Lufga',
     fontWeight: FontWeight.w700,
